@@ -63,7 +63,7 @@ const [isLoading,setIsLoading] = useState(true)
                 </div>
     
             </div>
-            <h2 className='info__temperature' >{isCelcius ? temperture?.celcius : temperture?.farenheit}</h2>
+            <h2 className='info__temperature'><i class="fa-solid fa-temperature-high"></i>  {isCelcius ? temperture?.celcius : temperture?.farenheit}</h2>
             <button className='change__temperature' onClick={handleClick}>{isCelcius ? 'Cambiar a ºF' : 'Cambiar a ºC'}</button>
             <div className='attribution'>
                 Code by <a href="https://joelparra.netlify.app" target="_blank">Joel Parra</a>
