@@ -33,7 +33,7 @@ img {
 body{
     font-family: 'Inter', sans-serif;
     font-size: 14px;
-    padding: 45px 25px;
+    padding: 40px 10px;
     background-color: var(--color-body-bg);
     color: var(--color-text);
 }
@@ -130,6 +130,5 @@ body{
   
 .attribution{
     margin-top: 1.5em;
-    text-decoration: none;
-    list-style: none;
+   
 }
