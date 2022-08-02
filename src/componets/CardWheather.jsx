@@ -57,9 +57,9 @@ const [isLoading,setIsLoading] = useState(true)
                         <li><span>Dirección del viento: </span>{weather?.wind.deg} º</li>
                         <li><span>Nubosidad: </span>{weather?.clouds.all}%</li>
                         <li><span>Presión: </span>{weather?.main.pressure} hPa</li>
-                        <li><span>Humedad: </span>{weather?.main.humidity} %git</li>
+                        <li><span>Humedad: </span>{weather?.main.humidity} %</li>
                         
-                    </ul>
+                    </ul><div className=""></div>
                 </div>
     
             </div>
