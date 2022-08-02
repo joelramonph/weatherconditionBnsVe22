@@ -51,17 +51,22 @@ const [isLoading,setIsLoading] = useState(true)
                 <img src= { weather && `http://openweathermap.org/img/wn/${weather.weather[0].icon}@4x.png`} alt="" />
     
                 <div className='card__miniaturas-uno'>
-                    <h3>&#34;{weather?.weather[0].description}&#34;</h3>
-                    <ul>
-                        <li><span>Velocidad del viento </span>{weather?.wind.speed} m/s</li>
-                        <li><span>Nubosidad </span>{weather?.clouds.all}%</li>
-                        <li><span>Presión </span>{weather?.main.pressure} hPa</li>
+                    <h3 className='card__subtitle'>&#34;{weather?.weather[0].description}&#34;</h3>
+                    <ul className='list__items'>
+                        <li><span>Velocidad del viento: </span>{weather?.wind.speed} m/s</li>
+                        <li><span>Dirección del viento: </span>{weather?.wind.deg} º</li>
+                        <li><span>Nubosidad: </span>{weather?.clouds.all}%</li>
+                        <li><span>Presión: </span>{weather?.main.pressure} hPa</li>
                     </ul>
                 </div>
     
             </div>
-            <h2>{isCelcius ? temperture?.celcius : temperture?.farenheit}</h2>
-            <button onClick={handleClick}>{isCelcius ? 'Change to ºF' : 'Change to ºC'}</button>
+            <h2 className='info__temperature' >{isCelcius ? temperture?.celcius : temperture?.farenheit}</h2>
+            <button className='change__temperature' onClick={handleClick}>{isCelcius ? 'Cambiar a ºF' : 'Cambiar a ºC'}</button>
+            <div className='attribution'>
+                Code by <a href="https://joelparra.netlify.app" target="_blank">Joel Parra</a>
+            </div>
+            
         </article>
       )
     }
