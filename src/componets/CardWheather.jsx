@@ -53,7 +53,7 @@ const [isLoading,setIsLoading] = useState(true)
                 <div className='card__miniaturas-uno'>
                     <h3 className='card__subtitle'>&#34;{weather?.weather[0].description}&#34;</h3>
                     <ul className='list__items'>
-                        <li><span>Velocidad del viento: </span>{weather?.wind.speed} m/s</li>
+                        <li><span> Velocidad del viento: </span>{weather?.wind.speed} m/s</li>
                         <li><span>Dirección del viento: </span>{weather?.wind.deg} º</li>
                         <li><span>Nubosidad: </span>{weather?.clouds.all}%</li>
                         <li><span>Presión: </span>{weather?.main.pressure} hPa</li>

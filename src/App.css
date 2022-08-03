@@ -86,9 +86,10 @@ body{
 }
 
 .list__items{
+    
     list-style: none;
-    padding: 20px 40px;
-    text-align: center;
+    padding: 20px 30px;
+    text-align: left;
     background-color: var(--color-primary-blue-light);
     color: white;
     border-radius: 5px;
@@ -98,7 +99,9 @@ body{
 }
 .list__items li{
     margin-bottom: 0.8em;
+   
 }
+
 
 .info__temperature{
 
@@ -139,13 +142,14 @@ body{
 .loader-screen {
 	position: relative;
 	height: 100vh;
-	background-color: var(--color-primary-blue-light);
+	background-color: var(--color-body-bg);
 }
 
 .loader {
 	position: absolute;
 	top: 50%;
 	left: 50%;
+    
 	transform: translate(-50%, -50%);
 }
 	.lvl1,
@@ -157,11 +161,13 @@ body{
 		text-align: center;
 		border: 3px solid #fff;
 		border-radius: 50%;
+        
 	}
 	
 	.lvl1 {
 		width: 50px;
 		height: 50px;
+       
 		border-bottom-color: transparent;
 		animation: spin 1s linear infinite;
 	}
@@ -170,6 +176,7 @@ body{
 		width: 40px;
 		height: 40px;
 		margin-top: 2px;
+        
 		border-bottom-color: transparent;
 		/*animation: spin 1.5s linear infinite;*/
 	}
@@ -178,6 +185,7 @@ body{
 		width: 30px;
 		height: 30px;
 		margin-top: 2px;
+        
 		border-bottom-color: transparent;
 		/* animation: spin 1s linear infinite;*/
 	}
@@ -187,6 +195,7 @@ body{
 		height: 20px;
 		margin-top: 2px;
 		border-bottom-color: transparent;
+        
 		/* animation: spin .5s linear infinite;*/
 	}
 	
