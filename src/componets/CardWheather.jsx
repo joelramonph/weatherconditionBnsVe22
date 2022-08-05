@@ -43,31 +43,104 @@ const [isLoading,setIsLoading] = useState(true)
        return <LoadingScreen />
    } else {
     return (
-        <article className='card__containers'>
-            <h1 className='card__title'>Condiciones Meteorológicas App</h1>
+        <article className='current' >
+            {/* current weather */}
+
+            <h1 className='card__title'>Condiciones Meteorológicas</h1>
+                <h2 className='card__info-location'>{`${weather?.name}, ${weather?.sys.country}`}</h2>
+                
+                <article className='row'>
+                    <div className='row__image'>
+                        <img src= { weather && `http://openweathermap.org/img/wn/${weather.weather[0].icon}@4x.png`} alt="" />
+                     </div>
+                    <div className='row__info'>
+                        <div className="temperature">
+                            <h2 className='info__temperature'>  {isCelcius ? temperture?.celcius : temperture?.farenheit} </h2>
+
+                        </div>
+
+                        <div className="status-cloud">
+                            <h2 className='clouding'>Nubosidad {weather?.clouds.all}%</h2> 
+                        </div>
+
+                    </div>
+
+                
+                </article>
+
+                <article className='more'>
+                    
+                    {/*Item 1*/}
+                    <div className='item'>
+                        
+                        <span className='material-symbols-outlined'>air</span>
+                        <div className='item__text'>
+                        <h2 className='more__info wind'>{weather?.wind.speed} m/s</h2>
+                        <p className='info'>Velocidad Viento</p>
+                        </div>
+                       
+                    </div>
+                     {/*Item 2*/}
+                     <div className='item'>
+                        
+                        <span className='material-symbols-outlined'>explore</span>
+                        <div className='item__text'>
+                        <h2 className='more__info direction'>{weather?.wind.deg} º</h2>
+                        <p className='info'>Dirección viento:</p>
+                        </div>
+                        
+                    </div>
+                     {/*Item 3*
+                     <div className='item'>
+                     <span className='material-symbols-outlined'>water_drop</span>
+                        <div className='item__text'>
+                        <h2 className='more__info humity'>{weather?.main.humidity} %</h2>
+                        <p>Humedad</p>
+                        </div>
+                     </div>*/}
+                    {/*Item 4*/}
+
+                    <div className='item'>
+                    <span className='material-symbols-outlined'>tire_repair</span>
+                        <div className='item__text'>
+                        <h2 className='more__info presure'>{weather?.main.pressure} hPa</h2>
+                        <p className='info'>Presión</p>
+                        </div>
+                        
+                    </div>
+                </article>
+
+                <div className="btn__change">
+                        
+                        <button className='change__temperature' onClick={handleClick}>{isCelcius ? 'Cambiar a ºF' : 'Cambiar a ºC'}</button>  
+                     
+                        <div className='attribution'>
+                        Code by <a href="https://joelparra.netlify.app" target="_blank">Joel Parra</a>
+                        </div>          
+                    </div>
+
+            <div >
+
+                
+
+            </div>
+
+             
             
-            <h2 className='card__info-location'>{`${weather?.name}, ${weather?.sys.country}`}</h2>
-            <div className='card__miniaturas'>
-                <img src= { weather && `http://openweathermap.org/img/wn/${weather.weather[0].icon}@4x.png`} alt="" />
+           {/*
+            
+            
+              
     
                 <div className='card__miniaturas-uno'>
                     <h3 className='card__subtitle'>&#34;{weather?.weather[0].description}&#34;</h3>
-                    <ul className='list__items'>
-                        <li><span> Velocidad del viento: </span>{weather?.wind.speed} m/s</li>
-                        <li><span>Dirección del viento: </span>{weather?.wind.deg} º</li>
-                        <li><span>Nubosidad: </span>{weather?.clouds.all}%</li>
-                        <li><span>Presión: </span>{weather?.main.pressure} hPa</li>
-                        <li><span>Humedad: </span>{weather?.main.humidity} %</li>
-                        
-                    </ul><div className=""></div>
+                    
+                    <div className=""></div>
                 </div>
     
-            </div>
-            <h2 className='info__temperature'><i class="fa-solid fa-temperature-high"></i>  {isCelcius ? temperture?.celcius : temperture?.farenheit}</h2>
-            <button className='change__temperature' onClick={handleClick}>{isCelcius ? 'Cambiar a ºF' : 'Cambiar a ºC'}</button>
-            <div className='attribution'>
-                Code by <a href="https://joelparra.netlify.app" target="_blank">Joel Parra</a>
-            </div>
+            
+           
+            */}
             
         </article>
       )

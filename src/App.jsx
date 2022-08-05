@@ -5,6 +5,8 @@ import CardWheather from './componets/CardWheather'
 import LoadingScreen from './componets/LoadingScreen'
 
 function App() {
+
+  
   
   const [coords, setCoords] = useState()
   
@@ -29,7 +31,7 @@ function App() {
 
   return (
 
-    <div className="App">
+    <div className="App bg" >
       
      <CardWheather  lon = {coords?.lon} lat = {coords?.lat}/>
 

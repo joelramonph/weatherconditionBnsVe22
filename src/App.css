@@ -33,81 +33,135 @@ img {
 body{
     font-family: 'Inter', sans-serif;
     font-size: 14px;
-    padding: 40px 10px;
-    background-color: var(--color-body-bg);
+    padding: 5px 2px;
+    background-color: #1b1b32;
     color: var(--color-text);
 }
 
-.card__containers{
+
+/*.card__containers{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--color-card-bg);
+    background-color: red;
     padding: 2.5em 0.1em;
-    border-radius: 10px;
+    border-radius: 50px;
     overflow: hidden;
+}*/
+
+.current{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 0.1em;
+  
+    background: rgb(30, 107, 231);
+    background: linear-gradient(
+    0deg, 
+    rgb(30,107,255) 0%,
+    rgb(30, 107, 231) 43%,
+    rgb(3, 191, 255) 100%);
+    border-radius: 20px;
+    overflow: hidden;
+    
+   
+
 }
+
 
 .card__title{
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 0.4em;
-    font-size: 1.2rem;
+    letter-spacing: 0.2em;
+    font-size: 1rem;
     font-weight: 600;
-    padding: 10px;
-    color: var(--color-primary-blue-light);
+    padding: 0.5em;
+    color: white;
+    margin-bottom: 0.5em;
 }
 
 .card__info-location{
     text-align: center;
     letter-spacing: 0.2em;
-    font-size: 1rem;
-    background-color: var(--color-primary-blue-light);
-    padding: 0.8em;
+    font-size: 1.5rem;
+    
+    padding: 0.5em;
     margin-top: 1.5em;
     color: white;
-    font-weight: 400;
+    font-weight: 600;
 }
 
-.card__miniaturas-uno{
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3em;
+   
+}
+
+img{
+    width: 100px;
+}
+
+.info__temperature{
+    font-size: 3rem;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+}
+
+.clouding{
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.2em;
+    text-align: center;
+    font-weight: 600;
+}
+
+.more{
+    
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 4em;
+}
+
+.more__info{
+    width: 100px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: #ffffff;
+    text-align: center;
+   
+    
+}
+.material-symbols-outlined{
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.5em;
+    
+   
+}
+.info{
+   
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.7rem;
+    margin-top: 5px;
+    padding: 0 0.5em;
+    
+    
+    
+}
+
+.btn__change{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 2em;
 }
 
-.card__subtitle{
-    text-align: center;
-    color: var(--color-primary-blue-light);
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-
-}
-
-.list__items{
-    
-    list-style: none;
-    padding: 20px 30px;
-    text-align: left;
-    background-color: var(--color-primary-blue-light);
-    color: white;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    font-weight: 400;
-    
-}
-.list__items li{
-    margin-bottom: 0.8em;
-   
-}
-
-
-.info__temperature{
-
-    font-size: 2.5rem;
-    margin: 10px;
-}
 
 .change__temperature{
     appearance: button;
@@ -136,6 +190,7 @@ body{
     margin-top: 1.5em;
    
 }
+
 
 /*Loader*/
 
@@ -212,3 +267,24 @@ body{
 			transform: rotate(360deg);
 		}
 	}
+
+@media (min-width: 600px) {
+    
+    .card__containers{
+        min-width: 700px;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    .card__miniaturas-uno{
+        display: flex;
+        flex-direction: row-reverse;
+        column-gap: 2em;
+        
+       
+    }
+}
